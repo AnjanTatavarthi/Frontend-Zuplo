@@ -39,14 +39,14 @@ function Members() {
 
   const getLocationNames = async (locationId) => {
     const url =
-      `${backendApi}/api/location/getName?classId=` + locationId;
+      `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/location/getName?classId=` + locationId;
     const { data } = await axios.get(url);
     console.log("---", data[0].location);
     return data[0].location;
   };
   const [data, setData] = useState([]);
   const getData = async () => {
-    const url = `${backendApi}/api/users`;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/users`;
     const { data } = await axios.get(url);
     console.log(data);
     const members = data.data.map(async (el) => ({
@@ -78,7 +78,7 @@ function Members() {
   const [location, setLocation] = useState([]);
 
   const getLocation = async () => {
-    const url = `${backendApi}/api/location`;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/location`;
     const { data } = await axios.get(url);
     console.log(data);
     setLocation(data);

@@ -55,7 +55,7 @@ export default function Freetrail() {
   const [location, setLocation] = useState([]);
 
   const getLocation = async () => {
-    const url = `${backendApi}/api/location`;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/location`;
     const { data } = await axios.get(url);
     setLocation(data);
   };

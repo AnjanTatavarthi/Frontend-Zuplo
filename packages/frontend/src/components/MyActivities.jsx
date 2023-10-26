@@ -29,7 +29,7 @@ function MyActivities() {
 
   // const [equipmentMap, setEquipmentMap] = useState({});
   const getEquipments = async () => {
-    const url = `${backendApi}/api/equipment`;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/equipment`;
     const data = await axios.get(url);
     let eqMap = data.data;
     let tmp = {};
@@ -41,7 +41,7 @@ function MyActivities() {
   };
 
   const getActivities = async (equipmentMap) => {
-    const url = `${backendApi}/api/activity`;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/activity`;
     const activities = await axios.get(url);
     const activityObjectList = activities.data;
     let currentUserId = localStorage.getItem("token");

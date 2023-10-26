@@ -92,7 +92,7 @@ const MyEquipments = (props) => {
   const [equipments, setEquipments] = useState([]);
 
   const getEquipments = async () => {
-    const url = `${backendApi}/api/equipment`;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/equipment`;
     const data = await axios.get(url);
     console.log(data.data);
     setEquipments(data.data);

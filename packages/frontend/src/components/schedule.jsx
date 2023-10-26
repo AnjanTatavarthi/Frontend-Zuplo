@@ -48,7 +48,7 @@ function Schedule() {
   //   const memberId = JSON.parse(localStorage.getItem("token"));
   //   const memberIds = memberId.data._id;
   const routeParams = useParams();
-  const uri = `${backendApi}/api/class/schedule/?id=` + routeParams.id;
+  const uri = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/class/schedule/?id=` + routeParams.id;
 
   const [classes, setClasses] = useState([]);
   const [schedule, setSchedule] = useState([]);

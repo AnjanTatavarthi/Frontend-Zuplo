@@ -58,7 +58,7 @@ function ClassAnalytics() {
     return output;
   };
   const getClassName = async (classId) => {
-    const url = `${backendApi}/api/class/className?id=` + classId;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/class/className?id=` + classId;
     const { data } = await axios.get(url);
     return data[0].name;
   };

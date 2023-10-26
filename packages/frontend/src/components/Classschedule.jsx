@@ -16,7 +16,7 @@ function Class() {
   const [classes, setClasses] = useState([]);
 
   const getClass = async () => {
-    const url = `${backendApi}/api/class`;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/class`;
     const { data } = await axios.get(url);
     console.log(data);
     const expandClass = data.map((el, i) => ({

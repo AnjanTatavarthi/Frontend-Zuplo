@@ -18,7 +18,7 @@ function MyClasses() {
     : undefined;
 
   const getLocation = async () => {
-    const url = `${backendApi}/api/location`;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/location`;
     const { data } = await axios.get(url);
     data.map((item) => {
       locationMap[item._id] = item.location;
@@ -27,7 +27,7 @@ function MyClasses() {
   };
 
   const getClass = async () => {
-    const url = `${backendApi}/api/class`;
+    const url = `https://bronze-chipmunk-main-fba789c.d2.zuplo.dev/api/class`;
     const { data } = await axios.get(url);
 
     data.map((item) => {
